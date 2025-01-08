@@ -28,17 +28,17 @@ const Home = () => {
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="grid gap-6">
         {topStocks.map((stock) => (
-          <Card key={stock.symbol}>
-            <div
-              className="flex items-center space-x-6"
-              onClick={() => {
-                navigate("/main", {
-                  state: {
-                    symbol: stock.symbol,
-                  },
-                });
-              }}
-            >
+          <Card
+            key={stock.symbol}
+            onClick={() => {
+              navigate("/main", {
+                state: {
+                  symbol: stock.symbol,
+                },
+              });
+            }}
+          >
+            <div className="flex items-center space-x-6 ">
               <div className="flex-shrink-0">
                 <img
                   src={stock.logo}
